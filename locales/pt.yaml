@@ -1,0 +1,99 @@
+---
+language_name: '🇧🇷 Português'
+help: |
+  <b>Hey! 👋</b>
+  I will add <u>reactions</u> to your posts on the channel along with <u>native comments</u>. It's enough just to add me to your channel, give me permission to edit messages, and also add me to the group that is tied to the channel.
+
+  • If you do not want me to change all messages or want to change emoji, then click the buttons below or send the command /channels to configure. <i>To display a channel in the list, you must first write any post.</i>
+
+  <b>• Need help or have a suggestion?</b> Write to me: @Ly_OBot. Please write immediately what you are talking about and use English or Russian.
+  <b>• Do you like the bot?</b> You can help him at this link: donate.lyo.su
+
+  🧑‍💻 Follow the developer: @LyBlog (Only in Russian)
+
+  source: github.com/LyoSU/reacombot
+menu:
+  channels: '📣 Meus canais'
+channels:
+  select: |
+    Escolha um canal:
+  not_found: |
+    <b>😞 Você ainda não adicionou o bot a nenhum dos canais</b>
+
+    Se tem certeza de que fez isso, verifique se eu tenho permissão para editar mensagens e enviar qualquer postagem para o canal.
+  updated: |
+    Informação do canal foi atualizada!
+  control:
+    info: |
+      Canal selecionado: <b>${channel.title}</b>
+
+      • O que deseja alterar?
+    menu:
+      emoji: '${channel.settings.emojis} Emojis'
+      type: '✍️ Quando adicionar?'
+      comments_type: '💬 Botão de comentários'
+      links: '🔗 Botões de links'
+    no_available: |
+      O canal não está mais disponível.
+    types:
+      info: |
+        <b>Escolha quando o bot irá anexar reações às mensagens:</b>
+
+        • Sempre: Reações serão anexadas a cada postagem sempre que possível
+        • Uma vez: Reações só serão anexadas a uma nova postagem no canal. Depois disso, esta configuração mudará para "nunca" e você precisará alterá-la novamente aqui.
+        • Nunca: O bot nunca anexará reações às suas postagens.
+        • A pedido: Será adicionado quando a última linha da mensagem começar com o ! e, depois, existem emojis.
+      menu:
+        always: Sempre
+        one: Uma vez
+        never: Nunca
+        request: A pedido
+    comments_types:
+      info: |
+        <b>Escolha onde exibir comentários:</b>
+
+        • Sempre: O botão de comentário sempre será
+        • Uma vez: Somente a próxima postagem terá um botão. Então esta configuração vai mudar para "nunca" e você precisará mudá-la novamente aqui
+        • Nunca: não mostrar o botão de comentário
+      menu:
+        always: Sempre
+        one: Uma vez
+        never: Nunca
+    emojis:
+      send_emoji: |
+        <b>Envie um ou mais emojis:</b>
+
+        Atual: <code>${channel.settings.emojis}</code>
+        Um emoji = um botão
+    links:
+      send_links: |
+        <b>Enviar lista de botões:</b>
+
+        Exemplo:
+        <pre>Meu site - https://lyo.su/ | Telegram - https://telegram. rg/
+        Blog do desenvolvedor - https://t.me/LyBlog</pre>
+
+        Envie qualquer texto para excluir.
+
+        <i>Os botões atuais serão exibidos abaixo</i>
+      success: Botões alterados!
+  back: < Voltar
+rate:
+  vote:
+    rated: |
+      Você ${rateName} isso
+    back: |
+      Você tirou sua reação
+    rated_limit: |
+      ${reactList}
+
+      Os contadores na postagem serão atualizados em breve.
+wait: |
+  🕒 Os comentários serão postados aqui em breve...
+
+  Se demorar muito, provavelmente o bot não foi adicionado ao grupo vinculado.
+error:
+  cant_edited: |
+    <b>😓 Falha ao adicionar reações à <a href="${postLink}">última postagem</a></b>
+
+    Talvez eu não tenha permissão para editar as postagens.

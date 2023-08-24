@@ -1,0 +1,99 @@
+---
+language_name: '🇦🇿 Azərbaycanca'
+help: |
+  <b>Hey! 👋</b>
+  I will add <u>reactions</u> to your posts on the channel along with <u>native comments</u>. It's enough just to add me to your channel, give me permission to edit messages, and also add me to the group that is tied to the channel.
+
+  • If you do not want me to change all messages or want to change emoji, then click the buttons below or send the command /channels to configure. <i>To display a channel in the list, you must first write any post.</i>
+
+  <b>• Need help or have a suggestion?</b> Write to me: @Ly_OBot. Please write immediately what you are talking about and use English or Russian.
+  <b>• Do you like the bot?</b> You can help him at this link: donate.lyo.su
+
+  🧑‍💻 Follow the developer: @LyBlog (Only in Russian)
+
+  source: github.com/LyoSU/reacombot
+menu:
+  channels: '📣 Kanallarım'
+channels:
+  select: |
+    Kanalı seçin:
+  not_found: |
+    <b>😞 Botu hələ ki heç bir kanala əlavə etməmisiniz</b>
+
+    Bunu etdiyinizə əminsinizsə, mesajları "edit" etmək və kanala hər hansı bir yazı göndərmək üçün icazəmin olmasına əmin olun.
+  updated: |
+    Kanal məlumatları yeniləndi!
+  control:
+    info: |
+      Kanal seçildi: <b>${channel.title}</b>
+
+      • Nəyi dəyişdirmək istəyirsiniz?
+    menu:
+      emoji: '${channel.settings.emojis} emoji'
+      type: '✍️ Nə vaxt əlavə etməli?'
+      comments_type: '💬 Şərh düyməsi'
+      links: '🔗 İstinad klaviaturası'
+    no_available: |
+      Kanal artıq əlçatan deyil.
+    types:
+      info: |
+        <b>Botun mesajlara reaksiyalarını nə vaxt əlavə edə biləcəyini seçin:</b>
+
+        • Həmişə: Reaksiyalar mümkün olduqda hər yazıya əlavə olunacaq
+        • Bir dəfə: Reaksiyalar yalnız kanaldakı yeni bir yazıya əlavə olunacaq. Sonra bu ayar "heç vaxt" olaraq dəyişəcək və yenidən burada dəyişdirməlisiniz
+        • Heç vaxt: Bot heç vaxt yazılarınıza reaksiyalar əlavə etməyəcək.
+        • İstəyə görə: Mesajın son sətri "ilə" başladıqda əlavə edəcək! və sonra emojilər var.
+      menu:
+        always: Həmişə
+        one: Bir dəfəlik
+        never: Heç vaxt
+        request: Xahişi ilə
+    comments_types:
+      info: |
+        <b>Şərhlərin göstəriləcəyi yeri seçin:</b>
+
+        • Həmişə: Şərh düyməsi hər zaman
+        olacaq • Bir dəfə: Yalnız növbəti yazıda bir düymə olacaq. Sonra bu parametr "heç vaxt" olaraq dəyişəcək və burada yenidən dəyişdirməlisiniz
+        • Heç vaxt: şərh düyməsini göstərməyin
+      menu:
+        always: Həmişə
+        one: Bir dəfəlik
+        never: Heç vaxt
+    emojis:
+      send_emoji: |
+        <b>Bir və ya daha çox emoji göndərin:</b>
+
+        Cari: <code>${channel.settings.emojis}</code>
+        Bir emoji - bir düymə
+    links:
+      send_links: |
+        <b>Klaviatura siyahısını göndərin:</b>
+
+        Nümunə:
+        <pre>Saytım - https://lyo.su/ | Telegram - https://telegram.org/
+        Dev blog - https://t.me/LyBlog</pre>
+
+        Silmək üçün istənilən mətni göndərin.
+
+        <i>Hazırkı düymələr aşağıda ğöstəriləcək</i>
+      success: Klaviatura dəyişdirildi!
+  back: < Geri
+rate:
+  vote:
+    rated: |
+      Sən bunu ${rateName}
+    back: |
+      Reaksiyanı gaytardın
+    rated_limit: |
+      ${reactList}
+
+      Yazıdakı sayğaclar tezliklə yenilənəcək.
+wait: |
+  🕒 Şərhlər tezliklə burada yerləşdiriləcək...
+
+  Bu uzun müddət baş verməsəydi, böyük ehtimalla bot əlavə olunmuş qrupa əlavə edilmədi.
+error:
+  cant_edited: |
+    <b>😓 Son <a href="${postLink}">yazıya</a> reaksiya əlavə etmək alınmadı</b>
+
+    Yazıları redaktə etmək üçün icazəm olmaya bilər.
