@@ -6,7 +6,6 @@ COPY ./package*.json ./
 
 
 RUN npm install
-RUN npm install sharp@0.23.4
 COPY ./ ./
 
 
