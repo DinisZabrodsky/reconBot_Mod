@@ -1,14 +1,11 @@
 FROM node:18-alpine
 
-WORKDIR /
+WORKDIR $NODE_WORKDIR
 
 COPY ./package*.json ./
 
 RUN npm install
-RUN npm audit fix
 RUN npm install
-
-COPY ./ ./
 
 
 
