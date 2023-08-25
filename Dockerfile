@@ -1,12 +1,9 @@
-FROM nikolaik/python-nodejs:python3.8-nodejs12 AS builder
+FROM node:18-alpine
 
-ENV NODE_WORKDIR /app
-WORKDIR $NODE_WORKDIR
+WORKDIR /
 
-ADD . $NODE_WORKDIR
+COPY ./package*.json ./
+RUN npm install
+COPY ./ ./
 
-RUN apt-get update && apt-get install -y build-essential gcc wget git libvips && rm -rf /var/lib/apt/lists/*
-
-RUN ls -l node_modules/
-
-RUN npm install && npm install sharp@0.23.4 # TODO: sharp crashes if installed via npm install from installed via package.json
+CMD ["npm", "start"]
